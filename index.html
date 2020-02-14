@@ -13,14 +13,18 @@
 </head>
 <body>
 <!--Prozentrechner-->
-<h2>Przentrechner1</h2>
-<p>Wie viel Prozent ist X Kg von Y Kg:</p>
-
-  <label for="xWert">X-Wert eingeben:</label>
-  <input name="xWert" id="xValue" type="number" min="0">
-  <label for="yWert">Y-Wert eingeben:</label>
-  <input name="yWert" id="yValue" type="number" min="0">
-  <button id="submit">Berechnen</button>
+<section id="prozentrechner1">
+    <h2>Przentrechner V1</h2>
+    <label for="xWert">Vie viel Prozent ist</label>
+    <input name="xWert" id="xValue" type="number" min="0">
+    <label for="yWert">von</label>
+    <input name="yWert" id="yValue" type="number" min="0">
+    <button id="submit">Berechnen</button>
+    <div id="error-message">
+    </div>
+    <div id="result">
+    </div>
+</section>
 
   <script src="js/script.js"></script>
 </body>

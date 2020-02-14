@@ -1,17 +1,18 @@
 //Input Values
-let xValue = document.getElementById("xValue").value;
-let yValue = document.getElementById("yValue").value;
-let submit = document.getElementById("submit");
+var submit = document.getElementById("submit");
 
-//Function
-function calcPercentage(){
-    if(xValue == "" || yValue == ""){
-        alert("Daten eingeben!")
-    }else{
-        let result = (yValue/100) * xValue;
-        return result;
-    }
-}
 
 //Button click
-document.getElementById("submit").onclick = calcPercentage();
+document.getElementById("submit").onclick = function calcPercentage(){
+        let xValue = document.getElementById("xValue").value;
+        let yValue = document.getElementById("yValue").value;
+        let errorMessage = document.getElementById("error-message");
+        let resultOutput = document.getElementById("result");
+        if(xValue == "" || yValue == ""){
+            errorMessage.innerHTML = "<span>Bitte Werte eingeben</span>";
+        }else{
+            let result = xValue * 100 / yValue;
+            let returnResult = xValue + " sind " + result + " Prozent von " + yValue;
+            resultOutput.innerHTML = "<span>" + returnResult + "</span>";
+        }
+}   

@@ -1,0 +1,11 @@
+html{
+    font-family: sans-serif;
+}
+
+#error-message span{
+    color: red;
+}
+
+#result span{
+    color: green;
+}
